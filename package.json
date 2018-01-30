@@ -1,6 +1,6 @@
 {
   "name": "react-zoomable-image",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React component for zoomable images",
   "main": "build/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivtpz/react-zoomable-image.git"
+    "url": "git+https://github.com/jonathankauch/react-zoomable-image.git"
   },
   "keywords": [
     "react",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/ivtpz/react-zoomable-image/issues"
   },
-  "homepage": "https://github.com/ivtpz/react-zoomable-image#readme",
+  "homepage": "https://github.com/jonathankauch/react-zoomable-image#readme",
   "dependencies": {
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.4",
