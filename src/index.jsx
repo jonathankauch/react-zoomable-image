@@ -127,14 +127,6 @@ class ZoomableImage extends Component {
     }
   }
 
-  /**
-   * Make sure we don't leave any garbage behind
-   */
-  componentWillUnmount() {
-    this.removeBodyClickHandlers();
-  }
-
-
   startZoom = (initialFocalPoint, isTouchDevice) => {
     if (isTouchDevice) this.setState({ calcMovementFromDrag: true });
     if (!isEqual(this.state.viewWindowPosition, initialFocalPoint)) {
