@@ -127,6 +127,10 @@ class ZoomableImage extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.removeBodyClickHandlers();
+  }
+
   startZoom = (initialFocalPoint, isTouchDevice) => {
     if (isTouchDevice) this.setState({ calcMovementFromDrag: true });
     if (!isEqual(this.state.viewWindowPosition, initialFocalPoint)) {
@@ -217,7 +221,7 @@ class ZoomableImage extends Component {
     if (document && document.querySelector) {
       if (!this.bodyElement) this.bodyElement = document.querySelector('body');
       this.bodyClickHandlers.forEach((handler) => {
-        this.bodyElement.addEventListener(...handler);
+        this.bodyElement && this.bodyElement.addEventListener(...handler);
       });
     }
   };
@@ -225,7 +229,7 @@ class ZoomableImage extends Component {
   removeBodyClickHandlers = () => {
     if (document && document.querySelector) {
       this.bodyClickHandlers.forEach((handler) => {
-        this.bodyElement.removeEventListener(...handler);
+        this.bodyElement && this.bodyElement.removeEventListener(...handler);
       });
     }
   };
